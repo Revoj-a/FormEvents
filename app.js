@@ -1,6 +1,6 @@
 const form = document.querySelector("#shelterForm");
 const input = document.querySelector("#catName");
-const list = document.querySelector("#list");
+const list = document.querySelector("#cats");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   const catName = input.value;
@@ -8,4 +8,5 @@ form.addEventListener("submit", function (e) {
   newLI.innerText = catName;
   console.log(newLI);
   list.append(newLI);
+  input.value = "";
 });
